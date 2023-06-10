@@ -1,7 +1,7 @@
 import { type Entry } from '@/domain/entity'
 import { EntitySchema } from 'typeorm'
 
-export const AccountEntity = new EntitySchema<Entry>({
+export const EntryEntity = new EntitySchema<Entry>({
   name: 'entry',
   columns: {
     id: {

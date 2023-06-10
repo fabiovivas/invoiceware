@@ -2,7 +2,7 @@
 import { type EntryType } from '@/domain/entity'
 import { EntitySchema } from 'typeorm'
 
-export const AccounTypeEntity = new EntitySchema<EntryType>({
+export const EntityTypeEntity = new EntitySchema<EntryType>({
   name: 'entryType',
   columns: {
     id: {
