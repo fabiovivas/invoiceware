@@ -1,4 +1,4 @@
-import { type Account } from '@/domain/entity/account'
+import { type Account } from '@/domain/entity'
 import { EntitySchema } from 'typeorm'
 
 export const AccountEntity = new EntitySchema<Account>({

@@ -1,5 +1,5 @@
 
-import { type EntryType } from '@/domain/entity/entry-type'
+import { type EntryType } from '@/domain/entity'
 import { EntitySchema } from 'typeorm'
 
 export const AccounTypeEntity = new EntitySchema<EntryType>({
