@@ -10,8 +10,8 @@ const postgresDataSource = new DataSource({
   username: process.env.DATABASE_DEV_USERNAME,
   password: process.env.DATABASE_DEV_PASSWORD,
   database: process.env.DATABASE_DEV_DATABASE,
-  entities: ['src/infra/db/mapping/**/*'],
-  migrations: ['src/infra/db/migration/**/*']
+  entities: ['dist/infra/db/mapping/**/*'],
+  migrations: ['dist/infra/db/migration/**/*']
 })
 
 void postgresDataSource.initialize()
