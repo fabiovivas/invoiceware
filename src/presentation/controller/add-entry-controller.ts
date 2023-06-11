@@ -1,6 +1,7 @@
+import { EntryTypeEnum } from '@/domain/enum'
 import { type AddEntryNamespace, type IAddEntry } from '@/domain/usecase'
 import { Controller } from '@/presentation/controller'
-import { RequiredFieldError } from '@/presentation/error'
+import { InvalidParamError, RequiredFieldError } from '@/presentation/error'
 import { ok } from '@/presentation/helper'
 import { type IHttpResponse, type IHttpRequest } from '@/presentation/protocols'
 
@@ -20,6 +21,10 @@ export class AddEntryController extends Controller {
       if (!Object.prototype.hasOwnProperty.call(httpRequest.body, field)) {
         return new RequiredFieldError(field)
       }
+    }
+
+    if (!(<any>Object).values(EntryTypeEnum).includes(Number(httpRequest.body.type))) {
+      return new InvalidParamError('type')
     }
   }
 }
