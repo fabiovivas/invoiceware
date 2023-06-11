@@ -8,7 +8,6 @@ export class AddEntryController extends Controller {
   constructor (private readonly entry: IAddEntry) { super() }
 
   async perform (httpRequest: IHttpRequest): Promise<IHttpResponse<AddEntryNamespace.Result>> {
-    this.validate(httpRequest)
     const { type, value } = httpRequest.body
     const result = await this.entry.add({ type, value })
     return ok(result)

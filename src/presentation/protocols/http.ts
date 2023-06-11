@@ -7,5 +7,6 @@ export type IHttpRequest = {
   body?: any
   headers?: any
   params?: any
+  query?: any
   files?: any
 }
