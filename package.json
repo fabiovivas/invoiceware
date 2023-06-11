@@ -5,7 +5,7 @@
    "main": "index.js",
    "scripts": {
       "build": "rimraf dist && tsc -p tsconfig-build.json",
-      "dev": "npm run build && node dist/main",
+      "dev": "npm run build && npm run run && node dist/main",
       "lint": "eslint . --fix",
       "test": "jest --passWithNoTests --no-cache --runInBand",
       "test:watch": "npm test -- --watch",
@@ -50,6 +50,7 @@
       "pg": "^8.11.0",
       "rimraf": "^5.0.1",
       "swagger-ui-express": "^4.6.3",
+      "ts-node": "^10.9.1",
       "typeorm": "^0.3.16"
    }
 }
