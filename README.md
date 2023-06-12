@@ -27,6 +27,9 @@ docker-compose up
 npm run dev
 ```
 
+### Swagger
+/api/doc
+
 ### Limitações
 - Ao olharem para a pasta de tests perceberão que há apenas um teste que não testa nada. Isso ocorreu pq no processo de desenvolvimento ao procurar uma alternativa para simular o postgres em memória houve alguns problemas que inviabilizariam testes na camada de repositório e testes de integração. Para não perder a configuração de testes automáticos para cada commit foi adicionado esse teste fake. No futuro a implementação dos testes será realizada
 - Havia a intenção de criar middlewares de autenticação, tanto jwt como 2fa, mas por conta do tempo será desenvolvido em uma próxima versão
